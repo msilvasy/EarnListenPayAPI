@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200917184555_mg-5.cs" />
+    <Compile Remove="Migrations\20200917184555_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200917184619_mg-5.cs" />
+    <Compile Remove="Migrations\20200917184619_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200917184737_mg-5.cs" />
+    <Compile Remove="Migrations\20200917184737_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200917184936_mg-5.cs" />
+    <Compile Remove="Migrations\20200917184936_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200917185345_mg-5.cs" />
+    <Compile Remove="Migrations\20200917185345_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200917203148_mg-5.cs" />
+    <Compile Remove="Migrations\20200917203148_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919075922_mg-5.cs" />
+    <Compile Remove="Migrations\20200919075922_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919081414_mg-5.cs" />
+    <Compile Remove="Migrations\20200919081414_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919081801_mg-5.cs" />
+    <Compile Remove="Migrations\20200919081801_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919082010_mg-5.cs" />
+    <Compile Remove="Migrations\20200919082010_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919082701_mg-5.cs" />
+    <Compile Remove="Migrations\20200919082701_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919082807_mg-5.cs" />
+    <Compile Remove="Migrations\20200919082807_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919083001_mg-5.cs" />
+    <Compile Remove="Migrations\20200919083001_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200919094437_mg-5.cs" />
+    <Compile Remove="Migrations\20200919094437_mg-5.Designer.cs" />
+    <Compile Remove="Migrations\20200926172918_mg-6.cs" />
+    <Compile Remove="Migrations\20200926172918_mg-6.Designer.cs" />
+    <Compile Remove="Migrations\20200926181246_mg-7.cs" />
+    <Compile Remove="Migrations\20200926181246_mg-7.Designer.cs" />
+    <Compile Remove="Migrations\20200926181346_mg-7.cs" />
+    <Compile Remove="Migrations\20200926181346_mg-7.Designer.cs" />
+    <Compile Remove="Migrations\20200926181733_mg-7.cs" />
+    <Compile Remove="Migrations\20200926181733_mg-7.Designer.cs" />
+    <Compile Remove="Migrations\20200926182502_mg-7.cs" />
+    <Compile Remove="Migrations\20200926182502_mg-7.Designer.cs" />
+    <Compile Remove="Migrations\20200926182545_mg-8.cs" />
+    <Compile Remove="Migrations\20200926182545_mg-8.Designer.cs" />
+    <Compile Remove="Migrations\20200927070658_mg6.cs" />
+    <Compile Remove="Migrations\20200927070658_mg6.Designer.cs" />
+    <Compile Remove="Migrations\20200927072438_mg6.cs" />
+    <Compile Remove="Migrations\20200927072438_mg6.Designer.cs" />
+    <Compile Remove="Migrations\20200927073915_mg7.cs" />
+    <Compile Remove="Migrations\20200927073915_mg7.Designer.cs" />
+    <Compile Remove="Migrations\20200929201916_mg-8.cs" />
+    <Compile Remove="Migrations\20200929201916_mg-8.Designer.cs" />
+    <Compile Remove="Migrations\20201011174453_mg-10.cs" />
+    <Compile Remove="Migrations\20201011174453_mg-10.Designer.cs" />
+    <Compile Remove="Migrations\20201019182142_mg-9.cs" />
+    <Compile Remove="Migrations\20201019182142_mg-9.Designer.cs" />
+    <Compile Remove="Migrations\20201019182307_mg-9.cs" />
+    <Compile Remove="Migrations\20201019182307_mg-9.Designer.cs" />
+    <Compile Remove="Migrations\20201020080936_mg-9.cs" />
+    <Compile Remove="Migrations\20201020080936_mg-9.Designer.cs" />
+    <Compile Remove="Migrations\20201021182903_mg-10.cs" />
+    <Compile Remove="Migrations\20201021182903_mg-10.Designer.cs" />
+    <Compile Remove="Migrations\20201101093152_mg-11.cs" />
+    <Compile Remove="Migrations\20201101093152_mg-11.Designer.cs" />
+    <Compile Remove="Migrations\20201101161035_mg-12.cs" />
+    <Compile Remove="Migrations\20201101161035_mg-12.Designer.cs" />
+    <Compile Remove="Migrations\20201101161220_mg-12.cs" />
+    <Compile Remove="Migrations\20201101161220_mg-12.Designer.cs" />
+    <Compile Remove="Migrations\20201101190551_mg-12.cs" />
+    <Compile Remove="Migrations\20201101190551_mg-12.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ListenPay.Common\ListenPay.Common.csproj" />
+  </ItemGroup>
+
+</Project>

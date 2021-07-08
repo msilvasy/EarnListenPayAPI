@@ -1,0 +1,58 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- task: Cache@2
+  inputs:
+    key: 'npm | "$(Agent.OS)" | ListenPay.Frontend/package-lock.json'
+    path: '$(npm_config_cache)'
+    restoreKeys: |
+      npm | "$(Agent.OS)"
+      npm
+  displayName: Cache npm
+
+- task: Cache@2
+  inputs:
+    key: 'npm | "$(Agent.OS)" | ListenPay.Frontend/package-lock.json'
+    restoreKeys: |
+       npm | "$(Agent.OS)"
+       npm
+    path: ListenPay.Frontend/node_modules
+  displayName: Cache node_modules
+
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'npm install and build'
+  workingDirectory: 'ListenPay.Frontend'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'ListenPay.Frontend/dist'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    CleanTargetFolder: true
+  displayName: 'Copy dist files to artifacts staging directory'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'angular-app'
+    publishLocation: 'Container'
+  displayName: 'Publish angular-app artifacts'
